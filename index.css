@@ -1,0 +1,419 @@
+body {
+    font-family: 'Inter', sans-serif;
+    /* Use the provided image as the background */
+    background-color: #1a1a1a; /* Fallback color */
+    background-image: url('https://i.postimg.cc/HWwgXf2q/Chat-GPT-Image-5-2025-00-18-18.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep bg fixed during scroll */
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* NEW: Side Menu styles */
+.side-menu-ul {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu-li {
+  margin-bottom: 0px;
+}
+
+/* NEW: Unified styled-button */
+.styled-button {
+  background-color: transparent;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 30px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 11px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 1;
+}
+
+.styled-button p {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.styled-button:hover {
+  color: rgb(172, 40, 0);
+  text-align: center;
+}
+.styled-button:hover::before {
+  transform: rotate(0deg);
+  width: 100%;
+  height: 40px;
+  top: 2px;
+  border-radius: 3px;
+  background-color: rgb(255, 83, 53);
+}
+.styled-button::before {
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: tomato;
+  left: -10px;
+  top: 19px;
+  cursor: pointer;
+  transform: rotate(225deg);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.styled-button:active::before {
+  background-color: rgb(255, 38, 0);
+}
+
+/* State for active menu item or selected button */
+.styled-button.active {
+  color: rgb(172, 40, 0);
+  text-align: center;
+}
+
+.styled-button.active::before {
+   transform: rotate(0deg);
+  width: 100%;
+  height: 40px;
+  top: 2px;
+  border-radius: 3px;
+  background-color: rgb(255, 83, 53);
+}
+
+/* Disabled state */
+.styled-button:disabled {
+  color: #888;
+  cursor: not-allowed;
+}
+
+.styled-button:disabled:hover {
+   color: #888;
+}
+
+.styled-button:disabled::before {
+  background-color: #555;
+}
+
+.styled-button:disabled:hover::before {
+  transform: rotate(225deg);
+  width: 6px;
+  height: 6px;
+  top: 19px;
+  background-color: #555;
+}
+
+
+/* From Uiverse.io by mrhyddenn */ 
+.switch input {
+  display: none
+}
+
+.on,.off {
+  position: absolute;
+  text-shadow: inset 1px 1px 1px black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.on {
+  color: #fff;
+  top: 10px;
+  transition: all 0.1s;
+  font-family: sans-serif
+}
+
+.off {
+  color: #636161;
+  bottom: 5px;
+  transition: all 0.1s;
+  transform: translateX(-50%) scaleY(0.85);
+}
+
+.but {
+  background-color: #000;
+  border-radius: 400px 400px 400px 400px / 400px 400px 300px 300px;
+  border-bottom-width: 0px;
+  box-shadow: inset 8px 6px 5px -7px rgba(0,0,0,1)
+    ,inset -8px 6px 5px -7px rgba(0,0,0,1)
+    ,inset 0 -3px 2px -2px rgba(200,200,200,.5)
+    ,0 3px 3px -2px rgba(0,0,0,1)
+    ,inset 0 -230px 60px -200px rgba(255,255,255,.2)
+    ,inset 0 220px 40px -200px rgba(0,0,0,.3);
+  display: block;
+  font-size: 17px;
+  height: 60px;
+  position: relative;
+  transition: all 0.2s;
+  width: 40px;
+  cursor: pointer;
+}
+
+.back {
+  background-color: #000;
+  background-image: -webkit-linear-gradient(0deg, transparent 30%, transparent 65%)
+    ,-webkit-linear-gradient(0deg, rgba(245, 245, 245, 0) 30%, rgba(150,150,150,.1) 50%, rgba(150,150,150,0) 70%);
+  border-radius: 115px;
+  box-sizing: border-box;
+  height: 85px;
+  padding: 4px 4px;
+  transition: all 0.2s;
+  width: 50px;
+}
+
+.switch input:checked + .back .on, .switch input:checked + .back .off {
+  text-shadow: inset 1px 1px 1px black;
+}
+
+.switch input:checked + .back .on {
+  color: rgb(141, 141, 141);
+  top: 10px;
+  transform: translateX(-50%) scaleY(0.85);
+}
+
+.switch input:checked + .back .off {
+  color: #fff;
+  bottom: 5px;
+  transform: translateX(-50%) scaleY(1);
+}
+
+.switch input:checked + .back .but {
+  background: #232323;
+  background-image: -webkit-radial-gradient(55% 18%,circle closest-corner,rgba(0,0,0,.3) ,rgba(0,0,0,0));
+  border-radius: 410px 410px 410px 410px / 310px 310px 410px 410px;
+  box-shadow: inset 8px -4px 5px -7px rgba(0,0,0,1)
+    ,inset -8px -4px 5px -7px rgba(0,0,0,1)
+    , 0 -3px 8px -4px rgba(250,250,250,.4)
+    ,inset 0 3px 4px -2px rgba(10,10,10,1)
+    ,inset 0 280px 40px -200px rgba(0,0,0,.2)
+    ,inset 0 -200px 40px -200px rgba(180,180,180,.2);
+  margin-top: 20px;
+}
+
+.switch input:checked + .back {
+  background-image: -webkit-linear-gradient(90deg, black 30%, transparent 65%)
+    ,-webkit-linear-gradient(180deg, rgba(250,250,250,0) 0%, rgba(250,250,250,.4) 50%, rgba(150,150,150,0) 100%);
+  box-shadow: 28px 28px 28px -28px rgba(0,0,0,.1)
+    ,-28px 28px 28px -22px rgba(0,0,0,.1)
+    ,0 30px 30px 0px rgba(0,0,0,.2)
+    ,inset 0 1px 2px 0 rgba(0,0,0,.6);
+  padding: 2px 4px;
+}
+
+.l,.r {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.round,#onoff,.back,.but,.on,.off {
+  user-select: none;
+}
+
+/* NEW: Promo button from user request */
+/* From Uiverse.io by felipesntr, adapted for .promo-button */ 
+.promo-button {
+  display: inline-block; /* for <a> tag */
+  text-decoration: none; /* for <a> tag */
+  margin-top: 1rem; /* from mt-4 in original component */
+  padding: 0.6em 1em;
+  border: 4px solid #fa725a;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: #fa725a;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.promo-button:hover {
+  transform: scale(1.2) rotate(10deg);
+  background-color: #fa725a;
+  color: white;
+}
+
+/* From Uiverse.io by catraco, for new Heart Icon */ 
+.heart-container {
+  --heart-color: rgb(255, 91, 137);
+  position: relative;
+  width: 24px; /* Adjusted from 50px */
+  height: 24px; /* Adjusted from 50px */
+  transition: .3s;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container .svg-outline,
+        .heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+  display: block
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+  display: block
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* From Uiverse.io by marcelodolza */ 
+.loader {
+  --size: 200px; /* Adjusted from 400px */
+  --duration: 2.5s;
+  --logo-color: grey;
+  --background: linear-gradient(
+    0deg,
+    rgb(30 27 109 / 20%) 0%,
+    rgb(137 76 161 / 20%) 100%
+  );
+  height: var(--size);
+  aspect-ratio: 1;
+  position: relative;
+  pointer-events: none;
+}
+
+.loader .box {
+  position: absolute;
+  background: var(--background);
+  border-radius: 50%;
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px 10px 10px 0,
+    inset rgba(205, 155, 255, 0.5) 0px 5px 10px -7px;
+  animation: ripple var(--duration) infinite ease-in-out;
+  inset: var(--inset);
+  animation-delay: calc(var(--i) * 0.15s);
+  z-index: calc(var(--i) * -1);
+  pointer-events: all;
+  transition: all 0.3s ease;
+}
+
+.loader .box:last-child {
+  filter: blur(30px);
+}
+.loader .box:not(:last-child):hover {
+  filter: brightness(2.5) blur(5px);
+}
+
+.loader .logo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  padding: 30%;
+}
+
+.loader .logo svg {
+  fill: var(--logo-color);
+  width: 100%;
+  animation: color-change var(--duration) infinite ease-in-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      rgba(0, 0, 0, 0.5) 0px 10px 10px 0,
+      inset rgba(205, 155, 255, 0.5) 0px 5px 10px -7px;
+  }
+  65% {
+    transform: scale(1.4);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0 0 0;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow:
+      rgba(0, 0, 0, 0.5) 0px 10px 10px 0,
+      inset rgba(205, 155, 255, 0.5) 0px 5px 10px -7px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--logo-color);
+  }
+  50% {
+    fill: white;
+  }
+  100% {
+    fill: var(--logo-color);
+  }
+}

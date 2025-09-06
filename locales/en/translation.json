@@ -1,0 +1,189 @@
+{
+  "header": {
+    "title": "ArchiRender"
+  },
+  "tabs": {
+    "retouch": "Retouch",
+    "replace": "Replace",
+    "visualize": "Visualize",
+    "stylize": "Stylize",
+    "camera": "Camera",
+    "adjust": "Adjust",
+    "filters": "Filters"
+  },
+  "startScreen": {
+    "title": "✨ AI Architecture Visualization — Made Easy.",
+    "subtitle": "ArchiRender transforms sketches, 2D plans, and 3D models into ultra-photorealistic renders. Professional lighting, textures, and details—without the complex settings.",
+    "uploadButton": "Upload Project",
+    "dragDrop": "Drag and drop an image here and let ArchiRender work its magic ✨",
+    "features": {
+      "isometric": {
+        "title": "Isometric to Realism",
+        "description": "Convert technical views into ultra-photorealistic isometric renders. The exact geometry and proportions are preserved."
+      },
+      "plan": {
+        "title": "2D → 3D Top View",
+        "description": "A simple furniture or floor plan is transformed into a marketing image for presentations. With shadows, materials, and light."
+      },
+      "style": {
+        "title": "Professional Style",
+        "description": "Choose lighting, camera, and filters. Get studio-quality images: from daylight to evening atmosphere."
+      }
+    }
+  },
+  "error": {
+    "generic": "An Error Occurred",
+    "tryAgain": "Try Again",
+    "unknown": "An unknown error occurred.",
+    "noImageToEdit": "No image loaded to edit.",
+    "promptRequired": "Please enter a description for your edit.",
+    "hotspotRequired": "Please click on the image to select an area to edit.",
+    "generateFailed": "Failed to generate the image. {{error}}",
+    "hotspotRequiredReplace": "Please click on the image to select an area to replace.",
+    "referenceOrPromptRequired": "Please upload a reference image or provide a text description for the replacement.",
+    "replaceFailed": "Failed to replace the object. {{error}}",
+    "noImageToFilter": "No image loaded to apply a filter to.",
+    "filterFailed": "Failed to apply the filter. {{error}}",
+    "noImageToAdjust": "No image loaded to apply an adjustment to.",
+    "adjustFailed": "Failed to apply the adjustment. {{error}}",
+    "noImageToVisualize": "No image loaded to visualize.",
+    "visualizeFailed": "Failed to generate the visualization. {{error}}",
+    "noImageToStyle": "No image loaded to apply a style to.",
+    "styleFailed": "Failed to apply the style. {{error}}",
+    "noImageToPreset": "No image loaded to apply a camera preset to.",
+    "presetFailed": "Failed to apply the camera preset. {{error}}"
+  },
+  "loading": {
+    "message": "AI is working its magic..."
+  },
+  "controls": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "compare": "Compare",
+    "reset": "Reset",
+    "uploadNew": "Upload New",
+    "download": "Download Image"
+  },
+  "common": {
+    "generate": "Generate"
+  },
+  "retouchPanel": {
+    "instruction": "Click an area on the image to make a precise edit.",
+    "instructionHotspot": "Great! Now describe your localized edit below.",
+    "placeholder": "First click a point on the image",
+    "placeholderHotspot": "e.g., 'change my shirt color to blue'"
+  },
+  "replacePanel": {
+    "title": "Reference Object Replacement",
+    "instruction1": "1. Click an object on the image you want to replace.",
+    "instruction1_complete": "1. Object selected! ✅",
+    "instruction2": "2. Now, provide a reference for the new object.",
+    "uploadReferenceButton": "Upload Reference Image",
+    "changeReferenceButton": "Change Reference Image",
+    "placeholder": "Optional: Describe changes (e.g., 'make it red')",
+    "button": "Replace Object"
+  },
+  "visualizePanel": {
+    "tabs": {
+      "3dview": "3D View",
+      "isometric": "Isometric",
+      "floorplan": "Floor Plan",
+      "exploded": "Exploded"
+    },
+    "modes": {
+      "3dview": {
+        "title": "3D View to Photorealistic Render",
+        "description": "Convert any sketch, collage, or 3D view into an ultra-realistic visualization with studio-quality lighting and high-resolution textures.",
+        "button": "Generate Photorealistic Render"
+      },
+      "isometric": {
+        "title": "Isometric View Photorealistic Render",
+        "description": "Convert any isometric view from CAD, Archicad, or your sketches into an ultra-photorealistic render with cinematic lighting and PBR textures.",
+        "button": "Generate Ultra-Realistic Render"
+      },
+      "floorplan": {
+        "title": "2D Floor Plan to 3D Top-View Render",
+        "description": "Transform any 2D floor plan into a photorealistic 3D top-view visualization, preserving the exact layout, scale, and geometry.",
+        "button": "Generate 3D Top-View Render"
+      },
+      "exploded": {
+        "title": "Exploded 3D View Generator",
+        "description": "Generate IKEA-style exploded diagrams of furniture or interiors, rendered in ultra-photorealistic quality with PBR textures and perfect component separation.",
+        "button": "Generate Exploded View"
+      }
+    }
+  },
+  "stylizePanel": {
+    "title": "Quick Stylizer",
+    "description": "Restyle your render into a new design aesthetic.",
+    "styles": {
+      "scandinavian": "Scandinavian",
+      "loft": "Loft",
+      "japandi": "Japandi",
+      "minimalism": "Minimalism",
+      "vintage": "Vintage",
+      "coastal": "Coastal",
+      "industrial": "Industrial",
+      "bohemian": "Bohemian"
+    },
+    "button": "Apply {{style}} Style"
+  },
+  "cameraPanel": {
+    "title": "Professional Camera Presets",
+    "description": "Apply professional camera presets to simulate real photography settings like aperture, focal length, and depth of field.",
+    "presets": {
+      "wide": "Wide-Angle (16mm, f/8)",
+      "standard": "Standard (50mm, f/4)",
+      "portrait": "Portrait (85mm, f/1.8)",
+      "macro": "Macro (105mm, f/5.6)"
+    },
+    "button": "Apply \"{{preset}}\" Preset"
+  },
+  "adjustmentPanel": {
+    "title": "Apply a Professional Adjustment",
+    "presets": {
+      "blurBackground": "Blur Background",
+      "enhanceDetails": "Enhance Details",
+      "warmerLighting": "Warmer Lighting",
+      "studioLight": "Studio Light"
+    },
+    "placeholder": "Or describe an adjustment (e.g., 'change background to a forest')",
+    "button": "Apply Adjustment"
+  },
+  "filterPanel": {
+    "title": "Filter Studio",
+    "description": "Apply professional photo filters to your interior renders.",
+    "tabs": {
+      "quality": "Quality",
+      "atmosphere": "Atmosphere",
+      "style": "Style",
+      "effects": "Effects"
+    },
+    "filters": {
+      "quality": {
+        "hdrBalance": "HDR Balance",
+        "clarityBoost": "Clarity Boost",
+        "noiseReduction": "Noise Reduction",
+        "sharpnessPro": "Sharpness Pro"
+      },
+      "atmosphere": {
+        "warmLight": "Warm Light",
+        "coolLight": "Cool Light",
+        "naturalDaylight": "Natural Daylight",
+        "moodyShadows": "Moody Shadows"
+      },
+      "style": {
+        "minimalistWhite": "Minimalist White",
+        "industrialGrey": "Industrial Grey",
+        "earthTones": "Earth Tones",
+        "retroFilm": "Retro Film"
+      },
+      "effects": {
+        "bloom": "Bloom",
+        "lensFlare": "Lens Flare",
+        "depthBlur": "Depth Blur",
+        "vignette": "Vignette"
+      }
+    }
+  }
+}
